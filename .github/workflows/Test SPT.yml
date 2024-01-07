@@ -130,7 +130,7 @@ jobs:
         repo init --depth=1 -u ${{ steps.manifest.outputs.value }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
       
-          - name: Install Speedtest
+        - name: Install Speedtest
       run: |
         sudo apt-get install curl
         curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
