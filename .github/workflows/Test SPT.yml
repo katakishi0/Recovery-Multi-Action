@@ -54,16 +54,6 @@ jobs:
         chmod a+x ~/bin/repo
         sudo ln -sf ~/bin/repo /usr/bin/repo
       
-    - name: Initialize repo
-      run: |
-        mkdir twrp
-        cd twrp
-        echo "wsdir=$(pwd)" >> $GITHUB_OUTPUT
-        git config --global user.name "brigudav"
-        git config --global user.email "alexvl1972@hotmail.com"
-        repo init --depth=1 -u ${{ steps.manifest.outputs.value }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
-      id: pwd
-      
     - name: Install Speedtest
       run: |
         sudo apt-get install curl
