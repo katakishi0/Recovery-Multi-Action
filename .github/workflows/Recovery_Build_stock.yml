@@ -18,7 +18,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/brigudav/android_device_xiaomi_surya_twrp.git'
+        default: 'git@github.com:EdwinT2/android_device_samsung_a12s.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -26,11 +26,11 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/xiaomi/surya'
+        default: 'device/samsung/a12s'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'surya'
+        default: 'a12s'
       DEVICE_TYPE:
         description: 'DEVICE_TYPE'
         required: true
