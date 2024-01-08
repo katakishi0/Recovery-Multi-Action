@@ -15,7 +15,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/brigudav/android_device_xiaomi_surya_twrp'
+        default: 'https://github.com/EdwinT2/android_device_samsung_a12s'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -23,11 +23,11 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/xiaomi/surya'
+        default: 'device/samsung/a12s'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'surya'
+        default: 'a12s'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
@@ -48,7 +48,7 @@ on:
       UPLOAD:
         description: 'Upload to Telegram Bot (true or false)'
         required: true
-        default: 'yes'
+        default: 'no'
         type: choice
         options:
         - yes
@@ -125,8 +125,8 @@ jobs:
         mkdir twrp
         cd twrp
         echo "wsdir=$(pwd)" >> $GITHUB_OUTPUT
-        git config --global user.name "brigudav"
-        git config --global user.email "alexvl1972@hotmail.com"
+        git config --global user.name "EdwinT2"
+        git config --global user.email "Edwin911Ti@gmail.com"
         repo init --depth=1 -u ${{ steps.manifest.outputs.value }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
 
@@ -173,7 +173,7 @@ jobs:
 
     - name: Set Variables
       run: |
-        echo "date=$(TZ=Asia/Bangkok date +%Y%m%d-%H%M)" >> $GITHUB_OUTPUT
+        echo "date=$(TZ=Asia/Bangkok date +%Y-%m-%d %H:%M)" >> $GITHUB_OUTPUT
         echo "Outdir=${GITHUB_WORKSPACE}/twrp/out/target/product/${{ github.event.inputs.DEVICE_NAME }}" >> $GITHUB_OUTPUT
       id: var
 
