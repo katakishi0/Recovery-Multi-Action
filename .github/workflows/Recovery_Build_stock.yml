@@ -18,7 +18,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'git@github.com:EdwinT2/android_device_samsung_a12s.git'
+        default: 'https://github.com/EdwinT2/android_device_samsung_a12s.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
