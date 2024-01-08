@@ -96,8 +96,8 @@ jobs:
         cd ${GITHUB_WORKSPACE}
         mkdir ${GITHUB_WORKSPACE}/workspace
         cd ${GITHUB_WORKSPACE}/workspace
-        git config --global user.name "brigudav"
-        git config --global user.email "alexvl1972@hotmail.com"
+        git config --global user.name "EdwinT2"
+        git config --global user.email "Edwin911Ti@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.LIBRARY_BRANCH }}
 
     - name: Repo Sync
@@ -136,7 +136,7 @@ jobs:
 
     - name: Set Variables
       run: |
-        echo "date=$(TZ=Asia/Bangkok date +%Y%m%d-%H%M)" >> $GITHUB_OUTPUT
+        echo "date=$(TZ=Asia/Bangkok date +%Y-%m-%d %H:%M)" >> $GITHUB_OUTPUT
         echo "Outdir=${GITHUB_WORKSPACE}/workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}" >> $GITHUB_OUTPUT
       id: var
 
